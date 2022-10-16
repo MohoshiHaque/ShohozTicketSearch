@@ -9,11 +9,17 @@ public class Searchbus {
     public void login() throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "D:\\ChromeDriver\\chromedriver_win32\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
-        driver.get("https://www.shohoz.com/bus-tickets");
+        String url = "https://www.shohoz.com/";
+        driver.get(url);
+
+        //Select Bus
+        WebElement bus =driver.findElement(By.xpath("/html/body/header/div[2]/div/nav/ul/li[1]/a"));
+        bus.click();
+        Thread.sleep(2000);
 
         //Departure City
-        WebElement departure1 = driver.findElement(By.id("dest_from"));
-        departure1.sendKeys("Dhaka");
+        WebElement departure = driver.findElement(By.id("dest_from"));
+        departure.sendKeys("Dhaka");
         Thread.sleep(2000);
 
         //Destination City
