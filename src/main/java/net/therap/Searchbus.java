@@ -14,12 +14,12 @@ public class Searchbus {
         //Departure City
         WebElement departure1 = driver.findElement(By.id("dest_from"));
         departure1.sendKeys("Dhaka");
-        Thread.sleep(2000);
+        Thread.sleep(3000);
 
         //Destination City
         WebElement destination = driver.findElement(By.id("dest_to"));
         destination.sendKeys("Chittagong");
-        Thread.sleep(2000);
+        Thread.sleep(3000);
 
         //Date of Journey
         WebElement calendaricon1 = driver.findElement(By.id("doj"));
@@ -27,7 +27,7 @@ public class Searchbus {
 
         WebElement calendardatej = driver.findElement(By.xpath("//*[@id=\"ui-datepicker-div\"]/table/tbody/tr[4]/td[2]/a"));
         calendardatej.click();
-        Thread.sleep(2000);
+        Thread.sleep(3000);
 
         //Date of Return
         WebElement calendaricon2 = driver.findElement(By.id("dor"));
@@ -35,7 +35,7 @@ public class Searchbus {
 
         WebElement calendardater = driver.findElement(By.xpath("//*[@id=\"ui-datepicker-div\"]/table/tbody/tr[4]/td[5]/a"));
         calendardater.click();
-        Thread.sleep(2000);
+        Thread.sleep(3000);
 
         //Search Buses button click
         WebElement submitsearch = driver.findElement(By.xpath("//*[@id=\"bussearch\"]/ul/div[5]/div[2]/button"));
